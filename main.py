@@ -3,8 +3,11 @@ from discord import Intents
 from googletrans import Translator
 import os
 import time
+from threading import Thread
+from itertools import cycle
+from discord.ext import tasks, commands
 
-TOKEN = ''
+TOKEN = 'MTIxMzkxNjU4MDUwNTcyMjg4MA.GOEKGK.whUFUCVhY0G-hRc52Sn8A0q2j5tItZEfsBrTtg'
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
 
@@ -14,6 +17,16 @@ translator = Translator()
 @client.event
 async def on_ready():
   print(f'{client.user} has connected to Discord!')
+  change_status.start()
+  print("Your bot is ready")
+
+
+status = cycle(['with Python', 'JetHub'])
+
+
+@tasks.loop(seconds=10)
+async def change_status():
+  await client.change_presence(activity=discord.Game(next(status)))
 
 
 @client.event
@@ -187,4 +200,7 @@ async def on_message(message):
       )
 
 
-client.run(TOKEN)
+try:
+  client.run(TOKEN)
+except Exception as e:
+  os.system('kill 1')
