@@ -6,7 +6,7 @@ import time
 from threading import Thread
 from itertools import cycle
 from discord.ext import tasks, commands
-from daemon import runner 
+
 TOKEN = ''
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
@@ -200,22 +200,7 @@ async def on_message(message):
       )
 
 
-class MyDaemon:
-    def __init__(self):
-        self.stdin_path = '/dev/null'
-        self.stdout_path = '/dev/null'
-        self.stderr_path = '/dev/null'
-        self.pidfile_path = '/tmp/discord_bot.pid'
-        self.pidfile_timeout = 5
-
-    def run(self):
-        try:
-            client.run(TOKEN)
-        except Exception as e:
-            print(f"Error in the daemon: {e}")
-            os.system('kill 1')
-
-
-if __name__ == "__main__":
-    daemon = runner.DaemonRunner(MyDaemon())
-    daemon.do_action()
+try:
+  client.run(TOKEN)
+except Exception as e:
+  os.system('kill 1')
