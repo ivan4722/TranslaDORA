@@ -25,4 +25,5 @@ German: !translate [Ausgangssprache] [Zielsprache] [Nachricht]
 !autotranslate [Zielsprache] [Nachricht]
 
 Just a few languages, other languages supported too.
+
 ![ex](https://cdn.discordapp.com/attachments/599673872408772660/1214434040619335750/Screenshot_2024-03-04_at_11.46.59_PM.png?ex=65f918d6&is=65e6a3d6&hm=eeb2ba88631fe01be450ab4e6725f8593fd463fa5a9fa815e574417367c463a1&)
