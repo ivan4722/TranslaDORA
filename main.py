@@ -7,7 +7,7 @@ from threading import Thread
 from itertools import cycle
 from discord.ext import tasks, commands
 from daemon import runner 
-TOKEN = 'MTIxMzkxNjU4MDUwNTcyMjg4MA.GOEKGK.whUFUCVhY0G-hRc52Sn8A0q2j5tItZEfsBrTtg'
+TOKEN = ''
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
 
