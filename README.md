@@ -2,6 +2,8 @@
 Using GoogleTrans 4.0.0 
 Source: https://pypi.org/project/googletrans/
 
+Bot invite link: https://discord.com/oauth2/authorize?client_id=1213916580505722880&permissions=121856&scope=bot
+
 # Usage
 English: !translate [source lang] [destination lang] [message] 
 !autotranslate [destination lang] [message]
