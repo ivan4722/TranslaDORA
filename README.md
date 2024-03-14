@@ -1,4 +1,4 @@
-# Discord Bot for seamless communication across languages
+# Discord Bot for seamless communication across languages (Total server user count: 1700+)
 Using GoogleTrans 4.0.0 
 Source: https://pypi.org/project/googletrans/
 
